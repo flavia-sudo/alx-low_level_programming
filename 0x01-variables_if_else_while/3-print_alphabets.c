@@ -6,9 +6,9 @@
  */
 int main(void)
 {
-	char ch = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+	char ch;
 
-	for (ch = 'a'; ch < 'Z'; ch++);
+	for (ch = 'a'; ch < 'Z'; ch++)
 	{
 		putchar(ch);
 	}
