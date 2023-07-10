@@ -17,7 +17,7 @@ int _atoi(char *s)
 	while (s[len] != '\0')
 		len++;
 
-	while (i < len && f == 0)
+	while (i < len && e == 0)
 	{
 		if (s[i] == '-')
 			++d;
@@ -43,13 +43,13 @@ int _atoi(char *s)
  * main - multiplies two numbers
  * @argc: number of arguments
  * @argv: array of arguments
- * Return: 0 (success), 1 (Error)
+ * Return: 0 (Success), 1 (Error)
  */
 int main(int argc, char *argv[])
 {
 	int result, num1, num2;
 
-	\if (argc < 3 || argc > 3)
+	if (argc < 3 || argc > 3)
 	{
 		printf("Error\n");
 		return (1);
