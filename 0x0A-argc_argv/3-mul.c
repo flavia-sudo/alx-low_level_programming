@@ -7,37 +7,37 @@
  */
 int _atoi(char *s)
 {
-	int a = 0;
-	int b = 0;
-	int c = 0;
+	int i = 0;
 	int d = 0;
-	int e = 0;
+	int n = 0;
+	int len = 0;
 	int f = 0;
+	int digit = 0;
 
-	while (s[d] != '\0')
-		d++;
+	while (s[len] != '\0')
+		len++;
 
-	while (a < d && e == 0)
+	while (i < len && f == 0)
 	{
-		if (s[a] == '-')
-			++b;
+		if (s[i] == '-')
+			++d;
 
-		if (s[a] >= '0' && s[a] <= '9')
+		if (s[i] >= '0' && s[i] <= '9')
 		{
-			f = s[a] - '0';
-			if (b % 2)
-				f = -f;
-			c = c * 10 + f;
-			e = 1;
-			if (s[a + 1] < '0' || s[a + 1] > '9')
+			digit = s[i] - '0';
+			if (d % 2)
+				digit = -digit;
+			n = n * 10 + digit;
+			f = 1;
+			if (s[i + 1] < '0' || s[i + 1] > '9')
 				break;
-			e = 0;
+			f = 0;
 		}
-		a++;
+		i++;
 	}
-	if (e == 0)
+	if (f == 0)
 		return (0);
-	return (d);
+	return (n);
 }
 /**
  * main - multiplies two numbers
