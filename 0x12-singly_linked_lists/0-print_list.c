@@ -2,9 +2,6 @@
 /**
  * print_list - prints all the elememnts
  * @h: pointer to node struct
- * @str: string - (malloc'ed string)
- * @len: length of the string
- * @next: points to the next node
  * Return: the number of nodes
  */
 size_t print_list(const list_t *h)
