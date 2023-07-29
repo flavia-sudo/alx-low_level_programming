@@ -1,6 +1,6 @@
 #include "lists.h"
 /**
- * add_node - adds a new node at the beginning 
+ * add_node - adds a new node at the beginning
  * @head: pointer to pointer of list_t struct type
  * @str: pointer to string
  * Return: the address of the new element or NULL if it failed
