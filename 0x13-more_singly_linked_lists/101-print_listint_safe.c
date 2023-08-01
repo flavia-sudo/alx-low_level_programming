@@ -31,19 +31,24 @@ size_t looped_listint_len(const listint_t *head)
 				type = type->next;
 				type1 = type1->next;
 			}
+
 			type = type->next;
 			while (type != type1)
 			{
 				nodes++;
 				type = type->next;
 			}
+
 			return (nodes);
 		}
+
 		type = type->next;
 		type1 = (type1->next)->next;
 	}
+
 	return (0);
 }
+
 /**
  * print_listint_safe - Prints a listint_t list safely.
  * @head: A pointer to the head
@@ -54,6 +59,7 @@ size_t print_listint_safe(const listint_t *head)
 	size_t nodes, i = 0;
 
 	nodes = looped_listint_len(head);
+
 	if (nodes == 0)
 	{
 		for (; head != NULL; nodes++)
@@ -70,7 +76,9 @@ size_t print_listint_safe(const listint_t *head)
 			printf("[%p]%d\n", (void *)head, head->n);
 			head = head->next;
 		}
+
 		printf("->[%p]%d\n", (void *)head, head->n);
 	}
+
 	return (nodes);
 }
