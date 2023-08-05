@@ -19,7 +19,7 @@ void print_binary(unsigned long int n)
 		if (n != check)
 		{
 			flag = 0;
-			wrrite(1, "1", 1);
+			write(1, "1", 1);
 		}
 		else if (!flag)
 		{
