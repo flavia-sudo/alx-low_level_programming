@@ -7,7 +7,7 @@
  */
 int main(int argc, char *av[])
 {
-	int type1, type2, typeread, typewrite;
+	int type1, type2, typeread, typewrite, err_close;
 	char buffer[1024];
 
 	if (argc != 3)
@@ -43,14 +43,8 @@ int main(int argc, char *av[])
 	} while (typeread == 1024);
 
 	if (close(type1) == -1)
-	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", type1);
 		exit(100);
-	}
-	if (close(type2) == -1)
-	{
-	dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", type2);
-	exit(100);
-	}
+
 	return (0);
 }
