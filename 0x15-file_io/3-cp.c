@@ -24,14 +24,14 @@ int main(int argc, char *av[])
 	type2 = open(av[2], O_TRUNC | O_CREAT | O_WRONLY, 0664);
 	if (type2 == -1)
 	{
-		dprint(STDERR_FILENO, "Error: Can't write to %s\n", av[2]);
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", av[2]);
 		exit(99);
 	}
 	do {
 		typeread = read(type1, buffer, 1024);
 		if (typeread == -1)
 		{
-			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", av[1];
+			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", av[1]);
 			exit(98);
 		}
 		typewrite = write(type2, buffer, typeread);
